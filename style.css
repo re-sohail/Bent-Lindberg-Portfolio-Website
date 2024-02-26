@@ -14,9 +14,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+*::selection{
+    background: #000;
+    color: #fff;
+}
 .main{
     width: 100%;
-    height: 100vh;
+    height: auto;
     /* background: #2e7871; */
     /* padding: 20px 30px; */
 }
@@ -39,12 +43,14 @@
     font-weight: 400;
     cursor: pointer;
 }
-.main h1{
+.main-heading{
+    padding: 50px 30px;
+}
+.main-heading h1{
     font-family: "Aeonik-Bold";
     font-size: 150px;
-    line-height: 145px;
+    line-height: 120px;
     font-weight: 300;
-    padding: 20px 40px;
     color: #1E1E21;
 }
 .info{
@@ -65,27 +71,49 @@
     justify-content: center;
     cursor: pointer;
 }
-.scroll-btn i{
+.scroll-btn .scroll-icon i{
     font-size: 35px;
 }
+
 .main-img{
     width: 100%;
-    height: 85%;
+    height: 90vh;
     margin: 30px 0;
-    background-image: url('img/main-img.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.main-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.more-btn{
+    padding: 20px;
+    background: #000;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+    z-index: 1;
+}
+.more-btn>i{
+    font-size: 30px;
+    color: #fff;
 }
 .about{
     width: 90%;
-    height: 50%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     font-family: 'Aeonik-Bold';
     border-bottom: 3px solid #1E1E21;
+    padding: 20px 0;
 }
 .about .left-side{
     width: 80%;
@@ -100,7 +128,7 @@
 }
 .about .right-side{
     width: 40%;
-    height: 90%;
+    height: 35vh;
 }
 .right-side{
     display: flex;
