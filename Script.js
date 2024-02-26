@@ -73,6 +73,6 @@ mainImage.addEventListener("mouseleave",()=>{
 mainImage.addEventListener("mousemove",(dets)=>{
     gsap.to(moreBtn, {
         left: dets.x - 40,
-        top: dets.y - 40
+        top: dets.y - 38
     })
 })
